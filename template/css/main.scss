@@ -1,13 +1,17 @@
+@import 'header.scss';
+
+
 *{
 	margin: 0;
 	padding: 0;
 }
 
-.template{
-	text-transform: uppercase;
-	font-size: 60px;
-	color: red;
-	&__inner{
-		display: block;
-	}
+body{
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.wrapper{
+	width: 940px;
+	margin: 0 auto;
 }
