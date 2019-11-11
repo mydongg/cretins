@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.template {
+  text-transform: uppercase;
+  font-size: 60px;
+  color: red; }
+  .template__inner {
+    display: block; }
