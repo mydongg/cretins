@@ -1,7 +1,20 @@
+// variables
+// 	colors
+$main: #3281a8;
+$support: #42c8f5;
+$nocontent: #bad4d9;
+$text: #29242e;
+$border: #29242e;
+// 	metrics
+$sq: 14px;
+
+// import
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import 'header.scss';
 
 
 *{
+	font-family: Roboto;
 	margin: 0;
 	padding: 0;
 }
