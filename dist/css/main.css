@@ -6,7 +6,7 @@
   background-color: #3281a8; }
 
 .hidden-menu {
-  display: block;
+  display: flex;
   position: fixed;
   list-style: none;
   padding: 10px;
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100%; }
+  margin: 10px; }
 
 .user__name {
   font-size: 20px;
@@ -120,14 +120,40 @@
   display: block;
   height: 64px;
   width: 64px;
-  border-radius: 14px;
+  border-radius: 10px;
   background-color: #bad4d9;
   border: 2px solid #29242e; }
+
+.innav {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #dff1f7;
+  align-items: center; }
+
+.search__field {
+  border-radius: 10px;
+  border: 2px solid #29242e;
+  font-size: 20px;
+  padding: 5px;
+  outline: none;
+  margin-bottom: 10px; }
+
+.navbar__item {
+  list-style-type: none; }
+
+.navbar__link {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  color: #29242e; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Roboto; }
 
 body {
   width: 100vw;

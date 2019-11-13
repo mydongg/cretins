@@ -6,7 +6,7 @@
   }
   
   .hidden-menu {
-    display: block;
+    display: flex;
     position: fixed;
     list-style: none;
     padding: 10px;
@@ -21,6 +21,7 @@
     z-index: 2;
     transform: translateZ(0);
     backface-visibility: hidden;
+
   }
   
   .hidden-menu a {
@@ -118,28 +119,3 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
-.user{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-}
-
-.user__name{
-    font-size: 20px;
-    font-weight: bold;
-    max-width: 300px;
-    overflow: hidden;
-    margin-right: 20px;
-    white-space: nowrap;
-    color: $text;
-}
-
-.user_avatar{
-    display: block;   
-    height: 64px;
-    width: 64px;
-    border-radius: $sq;
-    background-color: $nocontent;
-    border: 2px solid $border;
-}
