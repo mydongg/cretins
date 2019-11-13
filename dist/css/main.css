@@ -1,4 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.header {
+  background-color: #3281a8;
+  box-shadow: 0 0 10px #42c8f5;
+  height: 100px; }
+
+.wrapper--header {
+  display: flex;
+  height: 100%; }
+
+.header__left {
+  width: 50%; }
+
+.header__right {
+  width: 50%; }
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%; }
+
+.user__name {
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 300px;
+  overflow: hidden;
+  margin-right: 20px;
+  white-space: nowrap;
+  color: #29242e; }
+
+.user_avatar {
+  display: block;
+  height: 64px;
+  width: 64px;
+  border-radius: 14px;
+  background-color: #bad4d9;
+  border: 2px solid #29242e; }
+
 * {
+  font-family: Roboto;
   margin: 0;
   padding: 0; 
   box-sizing: border-box;

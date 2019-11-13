@@ -1,22 +1,3 @@
-.header{
-    background-color: $main;
-    box-shadow: 0 0 10px $support;
-    height: 100px;
-}
-
-.wrapper--header{
-    display: flex;
-    height: 100%;
-}
-
-.header__left{
-    width: 50%;
-}
-
-.header__right{
-    width: 50%;
-}
-
 .user{
     display: flex;
     justify-content: flex-end;
