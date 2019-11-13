@@ -13,18 +13,19 @@ $sq: 14px;
 @import 'header.scss';
 
 
-*{
-	font-family: Roboto;
+* {
 	margin: 0;
-	padding: 0;
-}
-
-body{
+	padding: 0; 
+	box-sizing: border-box;
+  }
+  
+  body {
 	width: 100vw;
-	min-height: 100vh;
-}
-
-.wrapper{
-	width: 940px;
-	margin: 0 auto;
-}
+	min-height: 100vh; 
+	display: flex;
+  }
+  
+  img {
+	max-width: 100%;
+	height: auto;
+  }
