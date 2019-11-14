@@ -1,31 +1,53 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-.sidebar {
-  width: 7vw;
+.sidebar-title {
+  position: fixed;
+  padding: 0 35px;
+  z-index: 3;
+  width: 130px;
   min-width: 120px;
   height: 100vh;
   background-color: #3281a8; }
+  .sidebar-title h1 {
+    position: relative;
+    top: 10%;
+    font-family: 'Neucha', cursive;
+    writing-mode: tb-rl;
+    color: #29242e;
+    font-size: 3em;
+    letter-spacing: 25px; }
 
 .hidden-menu {
-  display: flex;
   position: fixed;
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  box-sizing: border-box;
-  width: 210px;
-  background-color: #29242e;
+  width: 300px;
   height: 100vh;
-  top: 0;
-  left: -210px;
+  left: -180px;
   transition: .2s;
   z-index: 2;
   transform: translateZ(0);
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  background-color: #29242e; }
 
-.hidden-menu a {
-  color: white;
+.hidden-menu-nav ul {
+  list-style: none; }
+
+.hidden-menu-nav li {
+  width: 100%; }
+
+.hidden-menu-nav a {
+  color: #fff;
   text-decoration: none;
-  line-height: 1.5; }
+  line-height: 1.5;
+  display: block;
+  text-align: center;
+  padding: 23px;
+  width: 300px; }
+
+.hidden-menu-nav li a:hover {
+  background-color: #3281a8; }
 
 .hidden-menu-ticker {
   display: none; }
@@ -34,11 +56,11 @@
   color: #fff;
   padding: 5px;
   position: fixed;
-  top: 15px;
-  left: 45px;
+  top: 16px;
+  left: 44px;
   cursor: pointer;
   transition: left .2s;
-  z-index: 3;
+  z-index: 5;
   width: 47px;
   transform: translateZ(0);
   backface-visibility: hidden; }
@@ -55,105 +77,59 @@
   margin-top: 0; }
 
 .hidden-menu-ticker:checked ~ .btn-menu {
-  left: 160px; }
+  left: 370px; }
 
 .hidden-menu-ticker:checked ~ .hidden-menu {
-  left: 0; }
+  left: 130px; }
 
 .hidden-menu-ticker:checked ~ .btn-menu span.first {
   transform: rotate(45deg);
-  top: 10px; }
+  top: 10px;
+  background-color: #fff; }
 
 .hidden-menu-ticker:checked ~ .btn-menu span.second {
   opacity: 0; }
 
 .hidden-menu-ticker:checked ~ .btn-menu span.third {
   transform: rotate(-45deg);
-  top: -10px; }
-
-.title {
-  position: relative;
-  top: 10%;
-  padding: 0 35px; }
-
-.title h1 {
-  font-family: 'Neucha', cursive;
-  writing-mode: tb-rl;
-  color: #29242e;
-  font-size: 3em;
-  letter-spacing: 25px; }
-
-/*main here*/
-.content {
-  width: 93vw;
-  padding: 75px 100px;
-  flex: 1 1 70vw; }
-
-.content h2 {
-  border-bottom: 1px solid lightgray;
-  padding-bottom: 10px; }
-
-.content p {
-  font-size: 1.1em;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px; }
+  top: -10px;
+  background-color: #fff; }
 
 .user {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 10px; }
+  margin-bottom: 20px; }
 
-.user__name {
+.user-name {
   font-size: 20px;
   font-weight: bold;
   max-width: 300px;
   overflow: hidden;
   margin-right: 20px;
   white-space: nowrap;
-  color: #29242e; }
+  color: #fff; }
 
-.user_avatar {
+.user-avatar {
   display: block;
   height: 64px;
   width: 64px;
-  border-radius: 10px;
+  border-radius: 14px;
   background-color: #bad4d9;
   border: 2px solid #29242e; }
 
-.innav {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  background: #dff1f7;
-  align-items: center; }
-
-.search__field {
-  border-radius: 10px;
+.search-field {
+  border-radius: 14px;
   border: 2px solid #29242e;
   font-size: 20px;
   padding: 5px;
   outline: none;
-  margin-bottom: 10px; }
-
-.navbar__item {
-  list-style-type: none; }
-
-.navbar__link {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
-  text-decoration: none;
-  color: #29242e; }
+  margin-bottom: 20px; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto; }
+  box-sizing: border-box; }
 
 body {
   width: 100vw;
@@ -163,3 +139,18 @@ body {
 img {
   max-width: 100%;
   height: auto; }
+
+.content {
+  position: relative;
+  margin-left: 130px;
+  padding: 75px 100px; }
+  .content h2 {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px; }
+  .content p {
+    font-size: 1.1em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; }

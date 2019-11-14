@@ -1,17 +1,8 @@
-.innav{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    background: $bg;
-    align-items: center;
-}
-
-
-.search__field{
+.search-field{
     border-radius: $sq;
     border: 2px solid $border;
     font-size: 20px;
     padding: 5px;
     outline: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
