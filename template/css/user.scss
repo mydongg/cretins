@@ -2,20 +2,20 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
-.user__name{
+.user-name{
     font-size: 20px;
     font-weight: bold;
     max-width: 300px;
     overflow: hidden;
     margin-right: 20px;
     white-space: nowrap;
-    color: $text;
+    color: #fff;
 }
 
-.user_avatar{
+.user-avatar{
     display: block;   
     height: 64px;
     width: 64px;

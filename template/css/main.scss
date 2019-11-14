@@ -5,32 +5,47 @@ $support: #42c8f5;
 $nocontent: #bad4d9;
 $text: #29242e;
 $border: #29242e;
-$bg: #dff1f7;
 // 	metrics
-$sq: 10px;
+$sq: 14px;
 
 // import
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import 'header.scss';
 @import 'user.scss';
 @import 'search.scss';
-@import 'navbar.scss';
 
 
 * {
 	margin: 0;
 	padding: 0; 
 	box-sizing: border-box;
-	font-family: Roboto;
   }
   
-  body {
+body {
 	width: 100vw;
 	min-height: 100vh; 
 	display: flex;
-  }
+}
   
-  img {
+img {
 	max-width: 100%;
 	height: auto;
   }
+
+.content {
+  position: relative;
+  margin-left: 130px;
+	padding: 75px 100px;
+h2{
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+	}
+p {
+	font-size: 1.1em;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	}
+}

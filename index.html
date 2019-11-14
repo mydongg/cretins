@@ -8,62 +8,67 @@
 </head>
 <body>
 
-	<div class="sidebar" id="headernav">
-		<input type="checkbox" id="hmt" class="hidden-menu-ticker">
-		<label class="btn-menu" for="hmt">
-			<span class="first"></span>
-			<span class="second"></span>
-			<span class="third"></span>
-		</label>
-
-
-		<ul class="hidden-menu">
-
-			<li><a href="">Не знаю</a></li>
-			<li><a href="">Зачем</a></li>
-			<li><a href="">Но меню есть</a></li>
-		</ul>
-
-		
-		<div class="title">
+	<div class="sidebar">
+		<div class="sidebar-title">
 			<h1>Клуб кинокритиков</h1>
+		</div>
+
+		<div class="sidebar-menu">
+
+			<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+			<label class="btn-menu" for="hmt">
+				<span class="first"></span>
+				<span class="second"></span>
+				<span class="third"></span>
+			</label>
+
+			<div class="hidden-menu">
+				<div class="user">
+					<div class="user-name">
+						Здарова, я Макс
+                    </div>
+                    
+					<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar">	
+                </div>
+                
+                <div class="search">
+				    <input type="text" class="search-field" placeholder="Жду вегу...">
+			    </div>
+
+				<div class="hidden-menu-nav">
+					<ul>
+						<li>
+                            <a href="#">Фильмы</a>
+                        </li>
+						<li>
+                            <a href="#">Сериалы</a>
+                        </li>
+                        <li>
+                            <a href="#">Мультики</a>
+                        </li>
+					</ul>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 
+	
 	<div class="content">
 		<h2>Тупа текст</h2>
 
 		<p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации модели развития. </p>
 	</div>
 
-	
 
-	<div class="innav">
-			<!-- ШАПКА -->
-			<div class="user">
-				<div class="user__name">
-						Здарова я Макс
-					</div>
-				<img src="dist/src/nophoto.jpg" alt="" class="user_avatar">
-			</div>
-			<!-- ПОИСК -->	
-			<div class="search">
-				<input type="text" class="search__field" placeholder="Жду вегу...">
-			</div>
-			<!-- ПУНКТЫ МЕНЮ -->
-			<ul class="navbar">
-				<li class="navbar__item">
-					<a href="#" class="navbar__link">Фильмы</a>
-				</li>
-				<li class="navbar__item">
-					<a href="#" class="navbar__link">Сериалы</a>
-				</li>
-				<li class="navbar__item">
-					<a href="#" class="navbar__link">Мультики</a>
-				</li>
+	<!-- ШАПКА -->
+	
 				
 
-			</ul>
-		</div>
+
+
+	<!-- ТЕЛО -->
+	
+
 </body>
 </html>
