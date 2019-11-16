@@ -2,50 +2,71 @@
 // 	colors
 $main: #3281a8;
 $support: #42c8f5;
-$nocontent: #bad4d9;
+$nocontent: #e9f1f5;
 $text: #29242e;
 $border: #29242e;
+$score: #f5bc42;
 // 	metrics
 $sq: 14px;
 
 // import
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
 @import 'header.scss';
 @import 'user.scss';
 @import 'search.scss';
+@import 'navbar.scss';
+@import 'mainslider.scss';
+@import 'maincomments.scss';
 
-
-* {
+*{
 	margin: 0;
 	padding: 0; 
 	box-sizing: border-box;
+	font-family: Roboto;
   }
   
 body {
 	width: 100vw;
 	min-height: 100vh; 
-	display: flex;
+	overflow-x: hidden;
 }
   
 img {
 	max-width: 100%;
 	height: auto;
   }
+// .content {
+//   position: relative;
+//   margin-left: 130px;
+// padding: 75px 100px;
+// h2{
+// 	border-bottom: 1px solid lightgray;
+// 	padding-bottom: 10px;
+// 	}
+// p {
+// 	font-size: 1.1em;
+// 	display: block;
+// 	margin-block-start: 1em;
+// 	margin-block-end: 1em;
+// 	margin-inline-start: 0px;
+// 	margin-inline-end: 0px;
+// 	}
+// }
 
-.content {
-  position: relative;
-  margin-left: 130px;
-	padding: 75px 100px;
-h2{
-	border-bottom: 1px solid lightgray;
-	padding-bottom: 10px;
+.wrapper{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.score{
+	color: $score;
+	font-weight: bold;
+	&--comment{
+		font-size: 25px;
 	}
-p {
-	font-size: 1.1em;
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	}
+}
+
+.text{
+	font-size: 14px;
 }

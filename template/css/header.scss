@@ -36,9 +36,9 @@
 }
   
 .hidden-menu-nav {
+  width: 100%;
   ul {
     list-style: none;
-    
   }
 
   li{
@@ -51,7 +51,8 @@
     display: block;
     text-align: center;
     padding: 23px;
-    width: 300px;
+    font-size: 20px;
+    width: 100%;
   }
   li a:hover {
     background-color: $main;

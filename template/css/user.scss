@@ -3,6 +3,10 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
+    &--comment{
+        justify-content: flex-start;
+        margin: 0;
+    }
 }
 
 .user-name{
@@ -13,6 +17,11 @@
     margin-right: 20px;
     white-space: nowrap;
     color: #fff;
+    &--comment{
+        color: $text;
+        margin-right: 0;
+        margin-left: 20px;
+    }
 }
 
 .user-avatar{

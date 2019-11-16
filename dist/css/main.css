@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Neucha&display=swap");
 .sidebar-title {
   position: fixed;
   padding: 0 35px;
@@ -31,23 +32,23 @@
   padding-top: 80px;
   background-color: #29242e; }
 
-.hidden-menu-nav ul {
-  list-style: none; }
-
-.hidden-menu-nav li {
+.hidden-menu-nav {
   width: 100%; }
-
-.hidden-menu-nav a {
-  color: #fff;
-  text-decoration: none;
-  line-height: 1.5;
-  display: block;
-  text-align: center;
-  padding: 23px;
-  width: 300px; }
-
-.hidden-menu-nav li a:hover {
-  background-color: #3281a8; }
+  .hidden-menu-nav ul {
+    list-style: none; }
+  .hidden-menu-nav li {
+    width: 100%; }
+  .hidden-menu-nav a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.5;
+    display: block;
+    text-align: center;
+    padding: 23px;
+    font-size: 20px;
+    width: 100%; }
+  .hidden-menu-nav li a:hover {
+    background-color: #3281a8; }
 
 .hidden-menu-ticker {
   display: none; }
@@ -100,6 +101,9 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px; }
+  .user--comment {
+    justify-content: flex-start;
+    margin: 0; }
 
 .user-name {
   font-size: 20px;
@@ -109,48 +113,140 @@
   margin-right: 20px;
   white-space: nowrap;
   color: #fff; }
+  .user-name--comment {
+    color: #29242e;
+    margin-right: 0;
+    margin-left: 20px; }
 
 .user-avatar {
   display: block;
   height: 64px;
   width: 64px;
   border-radius: 14px;
-  background-color: #bad4d9;
+  background-color: #e9f1f5;
   border: 2px solid #29242e; }
 
 .search-field {
   border-radius: 14px;
   border: 2px solid #29242e;
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
   outline: none;
   margin-bottom: 20px; }
+
+.navbar__item {
+  list-style-type: none; }
+
+.navbar__link {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  color: #29242e; }
+
+.title {
+  padding: 20px 0;
+  color: #29242e; }
+
+.shortFilmPreview {
+  color: #29242e;
+  margin: 25px;
+  border-radius: 14px;
+  transition: .3s; }
+  .shortFilmPreview:hover {
+    cursor: pointer; }
+  .shortFilmPreview__poster {
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 14px; }
+  .shortFilmPreview__img {
+    width: 100%; }
+  .shortFilmPreview__name {
+    width: 100%;
+    font-size: 20px;
+    text-align: center; }
+  .shortFilmPreview__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px; }
+
+.comment {
+  display: flex;
+  position: relative;
+  border-radius: 14px;
+  background-color: #e9f1f5;
+  width: 100%;
+  margin-bottom: 20px; }
+  .comment__left {
+    width: 30%;
+    margin: 10px;
+    border-right: 1px solid #29242e; }
+  .comment__center {
+    width: 70%;
+    margin: 10px; }
+  .comment__for {
+    padding-left: 84px; }
+  .comment__more {
+    border-radius: 14px;
+    box-shadow: 0 0 5px #3281a8;
+    border: 2px solid #3281a8;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: #3281a8;
+    font-weight: bold;
+    transition: .3s; }
+    .comment__more:hover {
+      background-color: #3281a8;
+      color: #000; }
+  .comment__title {
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 18px; }
+
+.commentFilm {
+  display: flex;
+  align-items: center; }
+  .commentFilm__imgOuter {
+    width: 64px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 14px; }
+  .commentFilm__img {
+    width: 100%; }
+  .commentFilm__name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Roboto; }
 
 body {
   width: 100vw;
   min-height: 100vh;
-  display: flex; }
+  overflow-x: hidden; }
 
 img {
   max-width: 100%;
   height: auto; }
 
-.content {
-  position: relative;
-  margin-left: 130px;
-  padding: 75px 100px; }
-  .content h2 {
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 10px; }
-  .content p {
-    font-size: 1.1em;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px; }
+.wrapper {
+  margin: 0 auto;
+  width: 1000px; }
+
+.score {
+  color: #f5bc42;
+  font-weight: bold; }
+  .score--comment {
+    font-size: 25px; }
+
+.text {
+  font-size: 14px; }

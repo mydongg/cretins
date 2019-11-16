@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="dist/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Клуб кинокритиков</title>
-	<link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
@@ -38,10 +38,10 @@
 				<div class="hidden-menu-nav">
 					<ul>
 						<li>
-                            <a href="#">Фильмы</a>
+                            <a href="#"></i> Фильмы</a>
                         </li>
 						<li>
-                            <a href="#">Сериалы</a>
+                            <a href="#">  Сериалы</a>
                         </li>
                         <li>
                             <a href="#">Мультики</a>
@@ -54,21 +54,224 @@
 	</div>
 
 	
-	<div class="content">
+	<!-- <div class="content">
 		<h2>Тупа текст</h2>
 
 		<p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации модели развития. </p>
-	</div>
+	</div> -->
+	<div class="wrapper">
+		<h2 class="title">
+			Новинки месяца:
+		</h2>
+		<div class="mainSlider">
+				<carousel :per-page="5" :mouse-drag="true">
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="dist/src/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						
+				</carousel>
+		</div>
 
+		<h3 class="title">Новые рецензии:</h3>
+		<div class="mainComments">
+			<div class="comment">
+				<div class="comment__left">
+						<div class="user user--comment">
+							<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar user-avatar--comment">
+							<div class="user-name user-name--comment">
+								Здарова, я Макс
+							</div>		
+						</div>
+						<div class="comment__for">
+							на фильм
+						</div>
+						<div class="commentFilm">
+							<div class="commentFilm__imgOuter">
+								<img src="dist/src/oil.jpg" alt="" class="commentFilm__img">
+							</div>
+							<div class="commentFilm__name">Нефть</div>
+						</div>
+				</div>
+				<div class="comment__center">
+					<div class="score score--comment">
+						<i class="far fa-star"></i> 10
+					</div>
+					<div class="comment__title">Отличный фильм</div>
+					<div class="text">
+							Ублюдок, мать твою, а ну иди сюда говно собачье, решил ко мне лезть? Ты, засранец вонючий, мать твою, а? Ну иди сюда, попробуй меня трахнуть, я тебя сам трахну ублюдок, онанист чертов, будь ты проклят, иди идиот, трахать тебя и всю семью, говно собачье, жлоб вонючий, дерьмо, сука, падла, иди сюда, мерзавец, негодяй, гад, иди сюда ты - говно, ЖОПА!
+					</div>
+				</div>
 
-	<!-- ШАПКА -->
+				<div class="comment__more">
+					Читать полностью...
+				</div>
+			</div>
+			<div class="comment">
+					<div class="comment__left">
+							<div class="user user--comment">
+								<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar user-avatar--comment">
+								<div class="user-name user-name--comment">
+									Здарова, я Макс
+								</div>		
+							</div>
+							<div class="comment__for">
+								на фильм
+							</div>
+							<div class="commentFilm">
+								<div class="commentFilm__imgOuter">
+									<img src="dist/src/oil.jpg" alt="" class="commentFilm__img">
+								</div>
+								<div class="commentFilm__name">Нефть</div>
+							</div>
+					</div>
+					<div class="comment__center">
+						<div class="score score--comment">
+							<i class="far fa-star"></i> 10
+						</div>
+						<div class="comment__title">Отличный фильм</div>
+						<div class="text">
+								Ублюдок, мать твою, а ну иди сюда говно собачье, решил ко мне лезть? Ты, засранец вонючий, мать твою, а? Ну иди сюда, попробуй меня трахнуть, я тебя сам трахну ублюдок, онанист чертов, будь ты проклят, иди идиот, трахать тебя и всю семью, говно собачье, жлоб вонючий, дерьмо, сука, падла, иди сюда, мерзавец, негодяй, гад, иди сюда ты - говно, ЖОПА!
+						</div>
+					</div>
 	
-				
+					<div class="comment__more">
+						Читать полностью...
+					</div>
+				</div>
+			<div class="comment">
+				<div class="comment__left">
+						<div class="user user--comment">
+							<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar user-avatar--comment">
+							<div class="user-name user-name--comment">
+								Здарова, я Макс
+							</div>		
+						</div>
+						<div class="comment__for">
+							на фильм
+						</div>
+						<div class="commentFilm">
+							<div class="commentFilm__imgOuter">
+								<img src="dist/src/oil.jpg" alt="" class="commentFilm__img">
+							</div>
+							<div class="commentFilm__name">Нефть</div>
+						</div>
+				</div>
+				<div class="comment__center">
+					<div class="score score--comment">
+						<i class="far fa-star"></i> 10
+					</div>
+					<div class="comment__title">Отличный фильм</div>
+					<div class="text">
+							Ублюдок, мать твою, а ну иди сюда говно собачье, решил ко мне лезть? Ты, засранец вонючий, мать твою, а? Ну иди сюда, попробуй меня трахнуть, я тебя сам трахну ублюдок, онанист чертов, будь ты проклят, иди идиот, трахать тебя и всю семью, говно собачье, жлоб вонючий, дерьмо, сука, падла, иди сюда, мерзавец, негодяй, гад, иди сюда ты - говно, ЖОПА!
+					</div>
+				</div>
+
+				<div class="comment__more">
+					Читать полностью...
+				</div>
+			</div>
+		</div>
+	</div>	
 
 
 
-	<!-- ТЕЛО -->
-	
 
+	<script src="node_modules/vue/dist/vue.min.js"></script>
+	<script src="node_modules/vue-carousel/dist/vue-carousel.min.js"></script>
+	<script src="https://kit.fontawesome.com/1f4c1e3e13.js" crossorigin="anonymous"></script>
+	<script src="dist/js/main.js"></script>
 </body>
 </html>
