@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     border-radius: $sq;
-    background-color: $nocontent;
+    background-color: #fff;
     width: 100%;
     margin-bottom: 20px;
 
@@ -22,6 +22,8 @@
     }
 
     &__more{
+        display: block;
+        text-decoration: none;
         border-radius: $sq;
         box-shadow: 0 0 5px $main;
         border: 2px solid $main;
@@ -35,7 +37,7 @@
         transition: .3s;
         &:hover{
             background-color: $main;
-            color: #000;
+            color: $text;
         }
     }
 

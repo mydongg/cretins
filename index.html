@@ -7,7 +7,7 @@
 	<title>Клуб кинокритиков</title>
 </head>
 <body>
-
+	<div class="superwrapper">
 	<div class="sidebar">
 		<div class="sidebar-title">
 			<h1>Клуб кинокритиков</h1>
@@ -59,6 +59,7 @@
 
 		<p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации модели развития. </p>
 	</div> -->
+
 	<div class="wrapper">
 		<h2 class="title">
 			Новинки месяца:
@@ -195,9 +196,9 @@
 					</div>
 				</div>
 
-				<div class="comment__more">
+				<a href="#" class="comment__more" @click="modalVis = true">
 					Читать полностью...
-				</div>
+				</a>
 			</div>
 			<div class="comment">
 					<div class="comment__left">
@@ -227,9 +228,9 @@
 						</div>
 					</div>
 	
-					<div class="comment__more">
+					<a href="#" class="comment__more" @click="modalVis = true">
 						Читать полностью...
-					</div>
+					</a>
 				</div>
 			<div class="comment">
 				<div class="comment__left">
@@ -259,15 +260,44 @@
 					</div>
 				</div>
 
-				<div class="comment__more">
+				<a href="#" class="comment__more" @click="modalVis = true">
 					Читать полностью...
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>	
 
 
+	<!-- МОДАЛКА -->
+	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
+	<div class="modal" v-if="modalVis">
+		<div class="modal__top">
+			<div class="user user--comment">
+				<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar user-avatar--comment">
+				<div class="user-name user-name--comment">
+					Здарова, я Макс
+				</div>		
+			</div>
+		</div>
+		<div class="modal__center">
+			<div class="text">
+				<p>				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+				<p>				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+				<p>				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+			</div>
+		</div>
+		<div class="modal__bottom">
 
+		</div>
+
+		<div class="modal__close" @click="modalVis = false">
+			Закрыть
+		</div>
+	</div>
+</div>
 
 	<script src="node_modules/vue/dist/vue.min.js"></script>
 	<script src="node_modules/vue-carousel/dist/vue-carousel.min.js"></script>
