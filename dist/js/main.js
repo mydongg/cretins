@@ -1,5 +1,7 @@
 window.onload = function(){
-    more = document.getElementsByClassName('comment__more');
+    // Отмена перехода по ссылке чтобы при открытии полного комментария
+    // не возвращаться в начало страницы
+    more = document.getElementsByClassName('comment__title');
     for(mor of more){
         mor.addEventListener('click', function(e){
             e.preventDefault();
