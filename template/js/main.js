@@ -21,3 +21,5 @@ new Vue({
         'slide': VueCarousel.Slide
     }
 })
+
+
