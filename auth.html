@@ -11,7 +11,7 @@
     <div class="fullscreenWrapper">
         <div class="fullscreenWrapper__blur">
         </div>
-        <div class="authformOuter">
+        <div class="authformOuter" v-if="!regModalVis">
             <form action="" class="authform">
                 <h1 class="authform__title">Авторизация</h1>
                 <input type="text" class="authform__input" placeholder="Логин">
@@ -19,7 +19,23 @@
                 <button class="authform__submit">Войти</button>
             </form>
         </div>
-        <a href="#" class="register">Регистрация</a>
+        <div class="authformOuter" v-if="regModalVis">
+            <form action="" class="authform">
+                <h1 class="authform__title">Регистрация</h1>
+                <input type="text" class="authform__input" placeholder="Логин">
+                <input type="text" class="authform__input" placeholder="Пароль">
+                <input type="text" class="authform__input" placeholder="Код">
+                <button class="authform__submit">Зарегистрироваться</button>
+            </form>
+        </div>
+        <a href="#" class="register" id="register" v-if="!regModalVis" @click="regModalVis = true">Регистрация</a>
+        <a href="#" class="register" id="register" v-if="regModalVis" @click="regModalVis = false">Авторизация</a>
     </div>
+
+
+
+
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="dist/js/authreg.js"></script>
 </body>
 </html>

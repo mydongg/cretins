@@ -14,7 +14,7 @@ window.onload = function(){
 new Vue({
     el: '.superwrapper',
     data:{
-        modalVis: false
+        modalVis: false,
     },
     components: {
         'carousel': VueCarousel.Carousel,

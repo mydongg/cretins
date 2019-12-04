@@ -288,7 +288,8 @@
   color: #3281a8;
   background-color: #fff;
   border: 2px solid #3281a8;
-  transition: .3s; }
+  transition: .3s;
+  cursor: pointer; }
   .authform__submit:hover {
     background-color: #3281a8;
     color: #fff; }
