@@ -1,0 +1,43 @@
+.search {
+    margin-bottom: 40px;
+    
+    background: #fff;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    
+    &__content {
+        margin: 0;
+        padding: 40px;
+        width: 100%;
+    }
+
+    &__title {
+        color: $text;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__field {
+        border-radius: $sq;
+        border: 1px solid rgba(0, 0, 0, 0.35);
+        font-size: 20px;
+        padding: 10px;
+        outline: none;
+        width: 84%;
+        margin: 0;
+    }
+
+    &__button {
+        padding: 10px;
+        width: 15%;
+        margin: 0;
+
+        font-size: 20px;
+
+        cursor: pointer;
+
+        background: $main;
+        border: 1px solid $main;
+        color: #fff;
+    }
+
+}
