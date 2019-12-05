@@ -24,20 +24,26 @@
         outline: none;
         width: 84%;
         margin: 0;
+        &::-webkit-search-cancel-button{
+            cursor: pointer;
+        }
     }
 
     &__button {
         padding: 10px;
         width: 15%;
         margin: 0;
-
         font-size: 20px;
-
         cursor: pointer;
-
-        background: $main;
-        border: 1px solid $main;
-        color: #fff;
+        background: #fff;
+        border: 2px solid $main;
+        color: $main;
+        transition: .3s;
+        font-weight: bold;
+        &:hover{
+            background: $main;
+            color: #fff;
+        }
     }
 
 }
