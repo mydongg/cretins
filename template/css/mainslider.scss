@@ -1,11 +1,19 @@
-.title{
-    padding: 20px 0;
+.mainSlider {
+    background-color: #fff;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    padding: 40px;
+    margin-bottom: 40px;
     color: $text;
+
+    &__title {
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+    }
 }
 
+
 .shortFilmPreview{
-    color: $text;
-    margin: 25px;   
     border-radius: $sq;
     transition:  .3s;
 
@@ -18,7 +26,6 @@
         height: 200px;
         overflow: hidden;
         border-radius: $sq;
-
     }
     
     &__img{
@@ -29,13 +36,13 @@
         width: 100%;
         font-size: 20px;
         text-align: center;
-
     }
     
     &__info{
         width: 100%;
         display: flex;
-        justify-content: space-around;
         font-size: 16px;
+        justify-content: space-around;
     }
+
 }

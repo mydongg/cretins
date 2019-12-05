@@ -1,18 +1,31 @@
+.mainComments {
+    margin-bottom: 40px;
+    padding: 40px;
+
+    background: #fff;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    color: $text;
+
+    &__title {
+        color: $text;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+}
+
+
+
 .comment{
     display: flex;
     position: relative;
     background-color: #fff;
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px $border;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
 
-    &__text{
-        max-height: 150px;
-        overflow: hidden;
-        
-    }
-
+    
     &__left{
         width: 85%;
         display: flex;
@@ -21,6 +34,18 @@
         padding-right: 20px;
     }
 
+    &__text{
+        max-height: 150px;
+        overflow: hidden;
+
+        text-indent: 2em;
+        text-align: justify;
+
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
 
     &__bottom{
         display: flex;
@@ -31,23 +56,31 @@
         display: flex;
         align-items: flex-end;
         min-width: 90px;
+        
     }
-
 
     &__title{
         display: block;
+            
+        width: 500px;
+        overflow: hidden;
+        margin-bottom: 5px;
+
         color: $text;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 24px;
         font-weight: bold;
         text-align: right;
-        padding-bottom: 20px;
-        height: 30px;
-        overflow: hidden;
     }
 
     &__by{
         text-align: right;
+        font-size: 14px;
+
+        a { 
+            text-decoration: none;
+            color: $main;
+        }
     }
 
     &__right{
@@ -57,10 +90,7 @@
 
     &__poster{
         width: 100%;
-
     }
 }
-
-
 
 
