@@ -16,7 +16,8 @@ $sq: 0px;
 	padding: 0; 
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
-  }
+	color: $text;
+}
   
 body {
 	width: 100vw;
@@ -30,7 +31,7 @@ img {
 	height: auto;
 }
 
-.wrapper{
+.wrapper {
 	margin: 0 auto;
 	padding: 40px;
 
@@ -41,7 +42,7 @@ img {
 	//box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
 }
 
-.score{
+.score, .fa-star {
 	color: $score;
 	font-weight: bold;
 	&--comment{
@@ -60,3 +61,4 @@ img {
 @import 'maincomments.scss';
 @import 'modal.scss';
 @import 'auth.scss';
+@import 'profile.scss';

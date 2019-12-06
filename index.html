@@ -4,55 +4,50 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
 	<title>Клуб кинокритиков</title>
-
-	
 
 </head>
 
 <body>
 	<div class="superwrapper">
 
-	<div class="sidebar">
-		<div class="sidebar-title">
-			<h1>Клуб кинокритиков</h1>
-		</div>
+		<div class="sidebar">
 
-		<div class="sidebar-menu">
+			<div class="sidebar-inner">
 
-			<input type="checkbox" id="hmt" class="hidden-menu-ticker">
-			<label class="btn-menu" for="hmt">
-				<span class="first"></span>
-				<span class="second"></span>
-				<span class="third"></span>
-			</label>
-
-			<div class="hidden-menu">
-				<div class="user">
-					<div class="user-name">
-						Здарова, я <a href="/auth.html">Макс</a>
-                    </div>
-                    
-					<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar">	
-                </div>
-                
-				<div class="hidden-menu-nav">
-					<ul>
-						<li>
-                            <a href="#"></i> Фильмы</a>
-                        </li>
-						<li>
-                            <a href="#">  Сериалы</a>
-                        </li>
-                        <li>
-                            <a href="#">Мультики</a>
-                        </li>
-					</ul>
+				<div class="logo-block">
+					<a href="/">
+                        <img src="dist/src/logosample.png" alt="C">
+                    </a>
 				</div>
-			</div>
-			
+
+				<div class="nav-block">
+
+					<ul class="nav-list">
+						<li>
+							<a href="#">Фильмы</a>
+						</li>
+						<li>
+							<a href="#">Сериалы</a>
+						</li>
+						<li>
+							<a href="#">Мультики</a>
+						</li>
+            		</ul>
+            
+          		</div>
+          
+          		
+            	<div class="userPic">
+					<a href="/profile.html">
+						<img src="dist/src/nophoto.jpg" alt="ProfilePic">
+					</a>
+            	</div>
+
+        	</div>
+        
 		</div>
-	</div>
 
 	<div class="wrapper">
 
@@ -237,9 +232,9 @@
 	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
 	<div class="modal" v-if="modalVis">
 		<div class="modal__top">
-			<div class="user user--comment">
-				<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar user-avatar--comment">
-				<div class="user-name user-name--comment">
+			<div class="user__modal user--comment">
+				<img src="dist/src/nophoto.jpg" alt="user has no photo" class="user-avatar__modal user-avatar--comment">
+				<div class="user-name__modal user-name--comment">
 					Здарова, я Макс
 				</div>		
 			</div>
