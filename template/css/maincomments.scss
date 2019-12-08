@@ -5,6 +5,8 @@
     background: #fff;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
 
+    border-radius: $sq;
+
     &__title {
         padding-bottom: 10px;
         margin-bottom: 25px;
@@ -19,10 +21,10 @@
     background-color: #fff;
     width: 100%;
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
 
-    
     &__left{
         width: 85%;
         display: flex;
@@ -77,6 +79,9 @@
         a { 
             text-decoration: none;
             color: $main;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -87,6 +92,7 @@
 
     &__poster{
         width: 100%;
+        border-radius: $sq;
     }
 }
 

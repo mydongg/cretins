@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap");
 * {
   margin: 0;
@@ -22,19 +23,21 @@ img {
   width: 1000px;
   height: 100vh; }
 
-.score, .fa-star {
+.score,
+.fa-star {
   color: #f5bc42;
   font-weight: bold; }
-  .score--comment, .fa-star--comment {
+  .score--comment,
+  .fa-star--comment {
     font-size: 35px; }
 
-.sidebar {
+.header {
   position: fixed;
   width: 100%;
   height: 60px;
   z-index: 10000; }
 
-.sidebar-inner {
+.header-inner {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -66,17 +69,30 @@ img {
   font-weight: 400;
   padding: 15px 0;
   overflow: hidden;
-  display: block;
+  display: inline-block;
+  height: 100%;
   transition: .3s; }
   .nav-block a:hover {
     color: #e9f1f5;
     transition: .3s; }
 
-.userPic {
-  max-width: 40px;
-  display: flex; }
-  .userPic img {
-    border-radius: 50px; }
+.signIn {
+  max-width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .signIn img {
+    border-radius: 50px;
+    width: 40px;
+    margin-right: 10px; }
+  .signIn a {
+    text-decoration: none;
+    transition: .3s; }
+    .signIn a:hover {
+      transition: .3s;
+      text-decoration: underline;
+      color: #e9f1f5; }
 
 /*@media (max-width: 768px) {
   
@@ -137,7 +153,8 @@ img {
   margin-top: 60px;
   margin-bottom: 40px;
   background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 4px; }
   .search__content {
     margin: 0;
     padding: 40px;
@@ -146,7 +163,6 @@ img {
     text-align: center;
     margin-bottom: 25px; }
   .search__field {
-    border-radius: 0px;
     border: 1px solid rgba(0, 0, 0, 0.35);
     font-size: 20px;
     padding: 10px;
@@ -181,18 +197,19 @@ img {
   color: #29242e; }
 
 .mainSlider {
-  background-color: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
   padding: 40px;
   margin-bottom: 40px;
-  color: #29242e; }
+  color: #29242e;
+  background-color: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 4px; }
   .mainSlider__title {
     margin-bottom: 25px;
     padding-bottom: 10px;
     border-bottom: 1px solid lightgray; }
 
 .shortFilmPreview {
-  border-radius: 0px;
+  border-radius: 4px;
   transition: .3s; }
   .shortFilmPreview:hover {
     cursor: pointer; }
@@ -200,7 +217,7 @@ img {
     width: 150px;
     height: 200px;
     overflow: hidden;
-    border-radius: 0px; }
+    border-radius: 4px; }
   .shortFilmPreview__img {
     width: 100%; }
   .shortFilmPreview__name {
@@ -217,7 +234,8 @@ img {
   margin-bottom: 40px;
   padding: 40px;
   background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 4px; }
   .mainComments__title {
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -229,7 +247,7 @@ img {
   background-color: #fff;
   width: 100%;
   padding: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.35); }
   .comment__left {
     width: 85%;
@@ -269,18 +287,21 @@ img {
     .comment__by a {
       text-decoration: none;
       color: #3281a8; }
+      .comment__by a:hover {
+        text-decoration: underline; }
   .comment__right {
     width: 15%;
     overflow: hidden; }
   .comment__poster {
-    width: 100%; }
+    width: 100%;
+    border-radius: 4px; }
 
 .modal__close {
   color: #c96253;
   position: absolute;
   top: 10px;
   right: 10px;
-  border-radius: 0px;
+  border-radius: 4px;
   border: 2px solid #c96253;
   padding: 8px;
   font-weight: bold;
@@ -293,7 +314,7 @@ img {
 
 .modal {
   position: fixed;
-  border-radius: 0px;
+  border-radius: 4px;
   width: 700px;
   border: 3px solid #29242e;
   background-color: #fff;
@@ -324,14 +345,25 @@ img {
 .fullscreenWrapper {
   width: 100vw;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .fullscreenWrapper__blur {
     position: absolute;
     width: 100%;
     height: 100%;
     background-image: url("../src/authbg.jpg");
-    filter: blur(3px);
+    filter: brightness(0.7) blur(2px);
     z-index: -1; }
+
+.goBack {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  font-size: 20px;
+  color: #29242e;
+  text-decoration: none; }
+  .goBack:hover {
+    text-decoration: underline; }
 
 .authformOuter {
   position: relative;
@@ -339,51 +371,69 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  padding: 30PX; }
+  padding: 30px;
+  border-radius: 4px;
+  background: #fff; }
 
 .authform {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.authform__title {
-  margin-bottom: 20px;
-  color: #29242e; }
-
-.authform__input {
-  font-size: 20px;
-  padding: 5px;
-  margin-bottom: 20px; }
-
-.authform__submit {
-  padding: 10px 20px;
-  font-size: 20px;
-  color: #3281a8;
-  background-color: #fff;
-  border: 2px solid #3281a8;
-  transition: .3s;
-  cursor: pointer; }
-  .authform__submit:hover {
-    background-color: #3281a8;
-    color: #fff; }
-
-.register {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  font-size: 15px;
-  color: #29242e;
-  text-decoration: none;
-  transition: .3s; }
-  .register:hover {
+  flex-direction: column; }
+  .authform__title {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; }
+  .authform__input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
-    font-weight: bold; }
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35); }
+    .authform__input:focus {
+      border-bottom-color: #3281a8;
+      transition: .3s; }
+  .authform__submit {
+    margin: 10px 0 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #3281a8;
+    border: 1px solid #3281a8;
+    color: #fff;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer; }
+    .authform__submit:hover {
+      background: #29242e;
+      border-color: #29242e; }
+  .authform__separator {
+    border: none;
+    border-top: 1px solid lightgrey;
+    color: #29242e;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: visible;
+    text-align: center;
+    height: 5px; }
+    .authform__separator:after {
+      background: #fff;
+      content: 'Или';
+      position: relative;
+      top: -10px; }
+  .authform .register {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #3281a8;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s; }
+    .authform .register:hover {
+      text-decoration: underline; }
 
 .profile {
   margin-top: 60px;
   background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 4px; }
   .profile__content {
     margin: 0;
     padding: 40px;

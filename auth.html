@@ -11,25 +11,39 @@
     <div class="fullscreenWrapper">
         <div class="fullscreenWrapper__blur">
         </div>
+
+        <a href="index.html" class="goBack">&laquo; Вернуться</a>
+
         <div class="authformOuter" v-if="!regModalVis">
             <form action="" class="authform">
                 <h1 class="authform__title">Авторизация</h1>
+
                 <input type="text" class="authform__input" placeholder="Логин">
                 <input type="text" class="authform__input" placeholder="Пароль">
+
                 <button class="authform__submit">Войти</button>
+
+                <hr class="authform__separator">
+
+                <a href="#" class="register" id="register" v-if="!regModalVis" @click="regModalVis = true">Регистрация</a>
             </form>
         </div>
         <div class="authformOuter" v-if="regModalVis">
             <form action="" class="authform">
                 <h1 class="authform__title">Регистрация</h1>
+
                 <input type="text" class="authform__input" placeholder="Логин">
                 <input type="text" class="authform__input" placeholder="Пароль">
                 <input type="text" class="authform__input" placeholder="Код">
+                
                 <button class="authform__submit">Зарегистрироваться</button>
+
+                <hr class="authform__separator">
+
+                <a href="#" class="register" id="register" v-if="regModalVis" @click="regModalVis = false">Авторизация</a>
             </form>
         </div>
-        <a href="#" class="register" id="register" v-if="!regModalVis" @click="regModalVis = true">Регистрация</a>
-        <a href="#" class="register" id="register" v-if="regModalVis" @click="regModalVis = false">Авторизация</a>
+        
     </div>
 
 
