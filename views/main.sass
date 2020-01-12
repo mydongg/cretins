@@ -1,0 +1,56 @@
+//variables
+// variables
+// 	colors
+$main: #3281a8
+$support: #42c8f5
+$background: #e9f1f5
+$text: #29242e
+$border: #29242e
+$score: #f5bc42
+$close: #c96253
+// 	metrics
+$sq: 4px
+    
+    
+*
+    margin: 0
+    padding: 0
+    outline: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+    color: $text
+
+body
+    width: 100%
+    height: 100vh
+    overflow-x: hidden
+    background: $background
+
+img
+    max-width: 100%
+    height: auto
+
+.wrapper
+    margin: 0 auto
+    padding: 40px
+
+    width: 60%
+    height: 100%
+
+
+
+.box
+    width: 100%
+    height: auto
+    
+    margin-bottom: 40px
+    padding: 40px
+
+    background: #fff
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35)
+    border-radius: $sq
+
+//import
+@import url('https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap')
+@import 'sass/header', 'sass/search', 'sass/auth'
+@charset "utf-8"
