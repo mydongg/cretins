@@ -1,0 +1,7 @@
+.bundle
+.sass-cache
+
+public/node_modules
+
+gemfile.lock
+package-lock.json

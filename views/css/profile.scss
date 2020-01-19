@@ -1,0 +1,41 @@
+.profile {
+    margin-top: 60px;
+    background: #fff;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+
+    border-radius: 4px;
+
+    &__content {
+        margin: 0;
+        padding: 40px;
+        width: 100%;
+    }
+
+    &__info {
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    &__picture {
+        max-width: 180px;
+        margin: 0 auto 20px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        max-width: 100%;
+        text-align: center;
+
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    &__films {
+        line-height: 25px;
+        text-align: center;
+    }
+}

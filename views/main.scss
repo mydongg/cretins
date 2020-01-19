@@ -1,0 +1,55 @@
+// variables
+// 	colors
+$main: #3281a8;
+$support: #42c8f5;
+$nocontent: #e9f1f5;
+$text: #29242e;
+$border: #29242e;
+$score: #f5bc42;
+$close: #c96253;
+// 	metrics
+$sq: 4px;
+
+//code
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: $text;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: $nocontent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 40px;
+
+    width: 1000px;
+    height: auto;
+}
+
+.score,
+.fa-star {
+    color: $score;
+    font-weight: bold;
+
+    &--comment {
+        font-size: 35px;
+    }
+}
+
+
+// import
+@import url('https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap');
+@import 'css/header', 'css/search', 'css/user', 'css/navbar', 'css/mainslider', 'css/maincomments', 'css/modal', 'css/auth', 'css/profile';

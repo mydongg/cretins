@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 
 get '/' do
-  @posts = Post.all
+  @posts = Post.order("created_at DESC").limit(10)
   @title = 'Bruh'
-  slim :index
+  erb :index
 end
 
-get '/style.css' do
-  sass :main
+get '/posts/:id' do
+  @post = Post.find(params[:id])
+  @title = @post.title
+  @content = @post.content
+  erb :'posts/show'
 end
 
-get '/signIn' do
-  slim :auth
+get '/auth' do
+  erb :auth, :layout => false
+end
+
+post '/auth/login' do
+  
 end
 
 not_found do

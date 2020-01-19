@@ -1,0 +1,133 @@
+// -*- coding: utf-8 -*-
+
+.fullscreenWrapper {
+	width: 100vw;
+	height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+	&__blur {
+		position: absolute;
+		width: 100%;
+        height: 100%;
+		background-image: url('images/authbg.jpg');
+        filter: brightness(0.7) blur(2px);
+		z-index: -1;
+	}
+}
+
+.goBack {
+    position: absolute;
+    top: 4%;
+    left: 3%;
+
+    font-size: 20px;
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.authformOuter {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    padding: 30px;
+
+    border-radius: 4px;
+    background: #fff;
+}
+
+.authform {
+    display: flex;
+    flex-direction: column;
+    
+
+    &__title {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 20px;
+
+        font-size: 20px;
+
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+
+        &:focus {
+            border-bottom-color: $main;
+            transition: .3s;
+        }
+
+    }
+
+    &__submit {
+        margin: 10px 0 50px;
+        padding: 10px 20px;
+
+        font-size: 20px;
+        
+        background: $main;
+        border: 1px solid $main;
+        color: #fff;
+        border-radius: $sq;
+
+        transition: .3s;
+        cursor: pointer;
+    
+        &:hover {
+            background: $text;
+            border-color: $text;
+        }
+    }
+
+    &__separator {
+        border: none;
+        border-top: 1px solid lightgrey;
+
+        color: $text;
+        font-size: 15px;
+        font-weight: lighter;
+
+        overflow: visible;
+        text-align: center;
+        
+        height: 5px;
+
+        &:after {
+            background: #fff;
+            content: 'Или';
+            
+            position: relative;
+            top: -10px;
+        }
+    }
+
+    .register {
+        margin-top: 30px;
+        
+        font-size: 15px;
+        color: $main;
+        
+        text-align: center;
+        text-decoration: none;
+        transition: .3s;
+        
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+

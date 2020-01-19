@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+	<title>Клуб кинокритиков</title>
+
+</head>
+
+<body>
+<div class="superwrapper">
+		<div class="header">
+
+			<div class="header-inner">
+
+				<div class="logo-block">
+					<a href="/">
+                        <img src="./images/logosample.png" alt="C">
+                    </a>
+				</div>
+
+				<div class="nav-block">
+
+					<ul class="nav-list">
+						<li>
+							<a href="/">Фильмы</a>
+						</li>
+						<li>
+							<a href="/">Сериалы</a>
+						</li>
+						<li>
+							<a href="/">Мультики</a>
+						</li>
+            		</ul>
+            
+          		</div>
+          
+            	<div class="signIn">
+					<a href="/profile">
+						<img src="./images/nophoto.jpg" alt="ProfilePic">
+					</a>
+
+					<a href="/auth">Войти</a>
+				</div>
+				
+        	</div>
+        
+		</div>
+
+	<div class="wrapper">
+
+		<form class="search">
+			<div class="search__content">
+				<h2 class="search__title">Поиск по названию:</h2>
+
+				<input type="search" class="search__field" placeholder="Жду вегу...">
+
+				<input type="submit" class="search__button" value="Найти">
+			</div>
+		</form>
+
+
+		<div class="mainSlider">
+				<h2 class="mainSlider__title">
+					Новинки месяца:
+				</h2>
+				<carousel :per-page="5" :mouse-drag="true">
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						<slide>
+								<div class="shortFilmPreview">
+										<div class="shortFilmPreview__poster">
+											<img src="./images/oil.jpg" alt="" class="shortFilmPreview__img">
+										</div>
+										<div class="shortFilmPreview__name">Нефть</div>
+										<div class="shortFilmPreview__info">
+											<div class="score">
+												<i class="far fa-star"></i> 8.6
+											</div>
+											<div class="viewed">
+												<i class="fas fa-eye"></i> 1488
+											</div>
+										</div>
+									</div>
+						</slide>
+						
+				</carousel>
+		</div>
+
+		<div class="mainComments">
+			<h2 class="mainComments__title">Новые рецензии:</h3>
+			<% @posts.each do |post| %>
+			<div class="comment">
+				<div class="comment__left">
+					<div class="comment__text">
+						<p>
+							<%= post.content %>
+						</p>
+					</div>
+					
+					<div class="comment__bottom">
+						<div class="comment__score">
+							<div class="score score--comment">
+								<i aria-hidden="true" class="far fa-star"></i> 10
+							</div>
+						</div>
+						<div class="comment__info">
+							<a href="/posts/:id" class="comment__title" @click="modalVis = true">
+								<%= post.title %>
+							</a>
+							<div class="comment__by">
+								Рецензия на фильм: <a href="#" class="comment__link">Масло</a> от <a href="#" class="comment__link">Артур Пирожков</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="comment__right">
+					<img src="./images/oil.jpg" alt="" class="comment__poster">
+				</div>
+					
+			</div>
+			<% end %>
+
+	</div>	
+
+
+	<!-- МОДАЛКА -->
+	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
+	<div class="modal" v-if="modalVis">
+		<div class="modal__top">
+			<div class="user__modal user--comment">
+				<img src="./images/nophoto.jpg" alt="user has no photo" class="user-avatar__modal user-avatar--comment">
+				<div class="user-name__modal user-name--comment">
+					Здарова, я Макс
+				</div>		
+			</div>
+		</div>
+		<div class="modal__center">
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga quibusdam totam unde omnis sequi iure facere nemo, vero facilis in nesciunt hic vitae illo recusandae, aliquam repellendus voluptates accusamus adipisci eos eveniet provident? Optio officia quod saepe delectus tempora odio commodi, expedita in esse, assumenda vel maiores debitis? Voluptas quia nesciunt iusto neque! Laudantium, nam. Distinctio quasi eius rerum expedita excepturi, aut deleniti accusantium fugit qui inventore id dolores minus ipsa provident reprehenderit est similique quibusdam, nobis corporis, dolore exercitationem! Sit illo asperiores nesciunt totam, iure provident consequuntur recusandae veritatis eius facilis nemo molestias et id fuga temporibus voluptatum?
+				</p>
+			</div>
+		</div>
+		<div class="modal__bottom">
+
+		</div>
+
+		<div class="modal__close" @click="modalVis = false">
+			Закрыть
+		</div>
+	</div>
+</div>
+	<script src="./node_modules/vue/dist/vue.min.js"></script>
+	<script src="./node_modules/vue-carousel/dist/vue-carousel.min.js"></script>
+	<script src="https://kit.fontawesome.com/1f4c1e3e13.js" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
+
