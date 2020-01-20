@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% if @title  %>
+        <title><%= @title + " | #{SITE_NAME}" %></title>
+    <% else %>
+        <title><%="#{SITE_NAME}" %></title>
+    <% end %>
+
+    <link rel="stylesheet" href="/../css/main.css">
+
+</head>
+<body>
+<div class="superwrapper">
+	<div class="header">
+
+		<div class="header-inner">
+
+			<div class="logo-block">
+				<a href="/">
+                    <img src="/../images/logosample.png" alt="Cretins Logo">
+                </a>
+			</div>
+
+			<div class="nav-block">
+
+				<ul class="nav-list">
+					<li>
+						<a href="/">Фильмы</a>
+					</li>
+					<li>
+						<a href="/">Сериалы</a>
+					</li>
+					<li>
+						<a href="/">Мультики</a>
+					</li>
+					<li>
+						<a href="/posts/new">Новый пост</a>
+					</li>
+            	</ul>
+            
+          	</div>
+          
+            <div class="signIn">
+				<a href="/profile">
+					<img src="/../images/nophoto.jpg" alt="ProfilePic">
+				</a>
+
+				<a href="/auth">Войти</a>
+			</div>
+				
+        </div>
+        
+	</div>
+		<div class="wrapper">
+
+        	<%= yield %>
+			
+		</div>
+</div>
+</body>
+</html>

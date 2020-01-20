@@ -1,0 +1,97 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #29242e;
+}
+
+.fullscreenWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
+  .fullscreenWrapper__blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/authbg.jpg");
+    filter: brightness(0.7) blur(2px);
+    z-index: -1; }
+
+.goBack {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  font-size: 20px;
+  color: #29242e;
+  text-decoration: none; }
+  .goBack:hover {
+    text-decoration: underline; }
+
+.authformOuter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 30px;
+  border-radius: 4px;
+  background: #fff; }
+
+.authform {
+  display: flex;
+  flex-direction: column; }
+  .authform__title {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; }
+  .authform__input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35); }
+    .authform__input:focus {
+      border-bottom-color: #3281a8;
+      transition: .3s; }
+  .authform__submit {
+    margin: 10px 0 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #3281a8;
+    border: 1px solid #3281a8;
+    color: #fff;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer; }
+    .authform__submit:hover {
+      background: #29242e;
+      border-color: #29242e; }
+  .authform__separator {
+    border: none;
+    border-top: 1px solid lightgrey;
+    color: #29242e;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: visible;
+    text-align: center;
+    height: 5px; }
+    .authform__separator:after {
+      background: #fff;
+      content: 'Или';
+      position: relative;
+      top: -10px; }
+  .authform .register {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #3281a8;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s; }
+    .authform .register:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=auth.css.map */

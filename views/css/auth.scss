@@ -22,7 +22,7 @@
     left: 3%;
 
     font-size: 20px;
-    color: $text;
+    color: #29242e;
     text-decoration: none;
 
     &:hover {
@@ -65,7 +65,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.35);
 
         &:focus {
-            border-bottom-color: $main;
+            border-bottom-color: #3281a8;
             transition: .3s;
         }
 
@@ -77,17 +77,17 @@
 
         font-size: 20px;
         
-        background: $main;
-        border: 1px solid $main;
+        background: #3281a8;
+        border: 1px solid #3281a8;
         color: #fff;
-        border-radius: $sq;
+        border-radius: 4px;
 
         transition: .3s;
         cursor: pointer;
     
         &:hover {
-            background: $text;
-            border-color: $text;
+            background: #29242e;
+            border-color: #29242e;
         }
     }
 
@@ -95,7 +95,7 @@
         border: none;
         border-top: 1px solid lightgrey;
 
-        color: $text;
+        color: #29242e;
         font-size: 15px;
         font-weight: lighter;
 
@@ -117,7 +117,7 @@
         margin-top: 30px;
         
         font-size: 15px;
-        color: $main;
+        color: #3281a8;
         
         text-align: center;
         text-decoration: none;

@@ -1,0 +1,40 @@
+<div class="box">
+    <h2 class="edit__title">Редактирование рецензии:</h2>
+    <a id="deletePost" href="/posts/<%= @post.id %>/delete/" @click="modalVis = true">Удалить</a>
+    
+    <form action="/posts/<%= @post.id %>/edit/" method="post">
+        <input name="_method" type="hidden" value="put" />
+        
+        <label for="title">Заголовок:</label>
+        <input type="text" name="post[title]" id="title" value="<%= @post.title %>">   
+
+
+        <label for="content">Содержание:</label>
+        <textarea name="post[content]" id="content" ><%= @post.content %></textarea>
+
+        <input type="submit" value="Сохранить">
+    </form>
+</div>
+
+<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
+	<div class="modal" v-if="modalVis">
+        <div class="modal_center">
+        <% if @post %>
+            <p>Вы уверены?</p>
+            <form action="/posts/<%= @post.id %>/" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Да, удалить пост">
+            </form>
+        <% else %>
+            <p>Рецензия не найдена</p>
+        <% end %>
+        </div>
+
+		<div class="modal__close" @click="modalVis = false">
+			Отменить
+		</div>
+	</div>
+
+
+<script src="/../node_modules/vue/dist/vue.min.js"></script>
+<script src="/../js/delete.js"></script>

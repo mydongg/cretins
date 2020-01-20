@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-	<title>Клуб кинокритиков</title>
-
-</head>
-
-<body>
-<div class="superwrapper">
-		<div class="header">
-
-			<div class="header-inner">
-
-				<div class="logo-block">
-					<a href="/">
-                        <img src="./images/logosample.png" alt="C">
-                    </a>
-				</div>
-
-				<div class="nav-block">
-
-					<ul class="nav-list">
-						<li>
-							<a href="/">Фильмы</a>
-						</li>
-						<li>
-							<a href="/">Сериалы</a>
-						</li>
-						<li>
-							<a href="/">Мультики</a>
-						</li>
-            		</ul>
-            
-          		</div>
-          
-            	<div class="signIn">
-					<a href="/profile">
-						<img src="./images/nophoto.jpg" alt="ProfilePic">
-					</a>
-
-					<a href="/auth">Войти</a>
-				</div>
-				
-        	</div>
-        
-		</div>
-
-	<div class="wrapper">
-
-		<form class="search">
+		<form class="search box">
 			<div class="search__content">
 				<h2 class="search__title">Поиск по названию:</h2>
 
@@ -61,9 +8,8 @@
 			</div>
 		</form>
 
-
-		<div class="mainSlider">
-				<h2 class="mainSlider__title">
+		<div class="mainSlider box">
+				<h2 class="mainSlider box__title">
 					Новинки месяца:
 				</h2>
 				<carousel :per-page="5" :mouse-drag="true">
@@ -167,8 +113,8 @@
 				</carousel>
 		</div>
 
-		<div class="mainComments">
-			<h2 class="mainComments__title">Новые рецензии:</h3>
+		<div class="mainComments box">
+			<h2 class="mainComments box__title">Новые рецензии:</h3>
 			<% @posts.each do |post| %>
 			<div class="comment">
 				<div class="comment__left">
@@ -185,7 +131,7 @@
 							</div>
 						</div>
 						<div class="comment__info">
-							<a href="/posts/:id" class="comment__title" @click="modalVis = true">
+							<a href="/posts/:id/" class="comment__title" @click="modalVis = true">
 								<%= post.title %>
 							</a>
 							<div class="comment__by">
@@ -202,8 +148,7 @@
 			</div>
 			<% end %>
 
-	</div>	
-
+		</div>	
 
 	<!-- МОДАЛКА -->
 	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
@@ -234,11 +179,8 @@
 			Закрыть
 		</div>
 	</div>
-</div>
+
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="./node_modules/vue-carousel/dist/vue-carousel.min.js"></script>
 	<script src="https://kit.fontawesome.com/1f4c1e3e13.js" crossorigin="anonymous"></script>
 	<script src="./js/main.js"></script>
-</body>
-</html>
-

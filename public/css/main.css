@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap");
 * {
   margin: 0;
@@ -30,6 +29,21 @@ img {
   .score--comment,
   .fa-star--comment {
     font-size: 35px; }
+
+.box {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 4px; }
+  .box__title {
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid lightgray; }
+  .box:first-child {
+    margin-top: 60px; }
 
 .header {
   position: fixed;
@@ -119,42 +133,37 @@ img {
     margin-top: 130px;
   }
 }*/
-.search {
-  margin-top: 60px;
-  margin-bottom: 40px;
-  background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  border-radius: 4px; }
-  .search__content {
-    margin: 0;
-    padding: 40px;
-    width: 100%; }
-  .search__title {
-    text-align: center;
-    margin-bottom: 25px; }
-  .search__field {
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    font-size: 20px;
-    padding: 10px;
-    outline: none;
-    width: 84%;
-    margin: 0; }
-    .search__field::-webkit-search-cancel-button {
-      cursor: pointer; }
-  .search__button {
-    padding: 10px;
-    width: 15%;
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    background: #3281a8;
-    border: 1px solid #3281a8;
-    color: #fff;
-    transition: .3s; }
-    .search__button:hover {
-      background: #29242e;
-      border-color: #29242e; }
+.search__content {
+  margin: 0;
+  padding: 40px;
+  width: 100%; }
+.search__title {
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 10px; }
+.search__field {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  width: 84%;
+  margin: 0; }
+  .search__field::-webkit-search-cancel-button {
+    cursor: pointer; }
+.search__button {
+  padding: 10px;
+  width: 15%;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #3281a8;
+  border: 1px solid #3281a8;
+  color: #fff;
+  transition: .3s; }
+  .search__button:hover {
+    background: #29242e;
+    border-color: #29242e; }
 
 .user__modal {
   display: flex;
@@ -184,28 +193,6 @@ img {
   border-radius: 50px;
   background-color: #e9f1f5; }
 
-.navbar__item {
-  list-style-type: none; }
-
-.navbar__link {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
-  text-decoration: none;
-  color: #29242e; }
-
-.mainSlider {
-  padding: 40px;
-  margin-bottom: 40px;
-  color: #29242e;
-  background-color: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  border-radius: 4px; }
-  .mainSlider__title {
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid lightgray; }
-
 .shortFilmPreview {
   border-radius: 4px;
   transition: .3s; }
@@ -227,17 +214,6 @@ img {
     display: flex;
     font-size: 16px;
     justify-content: space-around; }
-
-.mainComments {
-  margin-bottom: 40px;
-  padding: 40px;
-  background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  border-radius: 4px; }
-  .mainComments__title {
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid lightgray; }
 
 .comment {
   display: flex;
@@ -340,118 +316,26 @@ img {
   background-color: #e9f1f5;
   opacity: 0.9; }
 
-.fullscreenWrapper {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden; }
-  .fullscreenWrapper__blur {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/authbg.jpg");
-    filter: brightness(0.7) blur(2px);
-    z-index: -1; }
-
-.goBack {
-  position: absolute;
-  top: 4%;
-  left: 3%;
-  font-size: 20px;
-  color: #29242e;
-  text-decoration: none; }
-  .goBack:hover {
-    text-decoration: underline; }
-
-.authformOuter {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 30px;
-  border-radius: 4px;
-  background: #fff; }
-
-.authform {
-  display: flex;
-  flex-direction: column; }
-  .authform__title {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center; }
-  .authform__input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.35); }
-    .authform__input:focus {
-      border-bottom-color: #3281a8;
-      transition: .3s; }
-  .authform__submit {
-    margin: 10px 0 50px;
-    padding: 10px 20px;
-    font-size: 20px;
-    background: #3281a8;
-    border: 1px solid #3281a8;
-    color: #fff;
-    border-radius: 4px;
-    transition: .3s;
-    cursor: pointer; }
-    .authform__submit:hover {
-      background: #29242e;
-      border-color: #29242e; }
-  .authform__separator {
-    border: none;
-    border-top: 1px solid lightgrey;
-    color: #29242e;
-    font-size: 15px;
-    font-weight: lighter;
-    overflow: visible;
-    text-align: center;
-    height: 5px; }
-    .authform__separator:after {
-      background: #fff;
-      content: 'Или';
-      position: relative;
-      top: -10px; }
-  .authform .register {
-    margin-top: 30px;
-    font-size: 15px;
-    color: #3281a8;
-    text-align: center;
-    text-decoration: none;
-    transition: .3s; }
-    .authform .register:hover {
-      text-decoration: underline; }
-
-.profile {
-  margin-top: 60px;
-  background: #fff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  border-radius: 4px; }
-  .profile__content {
-    margin: 0;
-    padding: 40px;
-    width: 100%; }
-  .profile__info {
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid lightgray; }
-  .profile__picture {
-    max-width: 180px;
-    margin: 0 auto 20px; }
-    .profile__picture img {
-      border-radius: 50%; }
-  .profile__name {
-    max-width: 100%;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 600; }
-  .profile__films {
-    line-height: 25px;
-    text-align: center; }
+.profile__content {
+  margin: 0;
+  padding: 40px;
+  width: 100%; }
+.profile__info {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid lightgray; }
+.profile__picture {
+  max-width: 180px;
+  margin: 0 auto 20px; }
+  .profile__picture img {
+    border-radius: 50%; }
+.profile__name {
+  max-width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600; }
+.profile__films {
+  line-height: 25px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -49,7 +49,30 @@ img {
     }
 }
 
+.box {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 40px;
+    padding: 40px;
+
+    background: #fff;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius: $sq;
+
+    &__title {
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    &:first-child {
+        margin-top: 60px;
+    }
+}
+
+
 
 // import
 @import url('https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap');
-@import 'css/header', 'css/search', 'css/user', 'css/navbar', 'css/mainslider', 'css/maincomments', 'css/modal', 'css/auth', 'css/profile';
+@import 'css/header', 'css/search', 'css/user', 'css/mainslider', 'css/maincomments', 'css/modal', 'css/profile';
