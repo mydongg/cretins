@@ -3,16 +3,18 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'sinatra-flash', '~> 0.3.0'
 gem 'sass'
 gem 'thin'
 gem 'slim'
-gem 'redcarpet'
+#gem 'redcarpet'
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+
 group :development do
-    gem 'shotgun'
     gem 'tux'
     gem 'sqlite3'
 end

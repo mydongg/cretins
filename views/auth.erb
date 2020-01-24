@@ -19,13 +19,13 @@
         <a href="/" class="goBack">&laquo; Вернуться</a>
 
         <div class="authformOuter" v-if="!regModalVis">
-            <form action="" class="authform">
+            <form action="/auth/login" method="post" class="authform">
                 <h1 class="authform__title">Авторизация</h1>
 
-                <input type="text" class="authform__input" placeholder="Логин">
-                <input type="text" class="authform__input" placeholder="Пароль">
+                <input id="username" name="username" type="text" class="authform__input" placeholder="Логин">
+                <input id="password" name="password" type="text" class="authform__input" placeholder="Пароль">
 
-                <button class="authform__submit">Войти</button>
+                <input type="submit" class="authform__submit" value="Войти">
 
                 <hr class="authform__separator">
 
@@ -33,14 +33,14 @@
             </form>
         </div>
         <div class="authformOuter" v-if="regModalVis">
-            <form action="" class="authform">
+            <form action="/auth/reg" method="post" class="authform">
                 <h1 class="authform__title">Регистрация</h1>
 
-                <input type="text" class="authform__input" placeholder="Логин">
-                <input type="text" class="authform__input" placeholder="Пароль">
+                <input id="username" name="username" type="text" class="authform__input" placeholder="Логин">
+                <input id="password" name="password" type="text" class="authform__input" placeholder="Пароль">
                 <input type="text" class="authform__input" placeholder="Код">
                 
-                <button class="authform__submit">Зарегистрироваться</button>
+                <input type="submit" class="authform__submit" value="Зарегистрироваться">
 
                 <hr class="authform__separator">
 
@@ -49,8 +49,6 @@
         </div>
         
     </div>
-
-
 
 
     <script src="./node_modules/vue/dist/vue.min.js"></script>

@@ -5,4 +5,3 @@ helpers do
 		time.strftime("%d %b %Y")
 	end
 end
-		

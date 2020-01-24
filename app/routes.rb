@@ -2,6 +2,7 @@
 
 get '/' do
   @posts = Post.order("created_at DESC").limit(10)
+  
   erb :index
 end
 
@@ -44,12 +45,6 @@ put '/posts/:id/edit/' do
   end
 end
 
-#get '/posts/:id/delete/' do
-#  @title = 'Подтвердите удаление'
-#  @post = Post.find(params[:id])
-#  erb :
-#end
-
 delete '/posts/:id/' do
   Post.find(params[:id]).destroy
   redirect to '/'
@@ -67,12 +62,27 @@ end
 
 post '/auth/login' do
   #отправка формы с авторизацией
-
+	
+	if @user.password == params[:password]
+		give_token
+		redirect to '/'
+		flash[:success] = "Вы авторизованы"
+	else
+		redirect to '/auth'
+		flash[:error] = "Войти не удалось"
+	end
 end
 
 post '/auth/reg' do
-  #отправка формы с регистрацией
-  
+	@user = User.create(params)
+	
+	if @user.save
+		redirect to '/auth'
+		flash[:success] = "Регистрация прошла успешно, теперь вы можете войти"
+	else
+		redirect to '/auth'
+		flash[:error] = "Регистрация не удалась"
+	end
 end
 
 not_found do

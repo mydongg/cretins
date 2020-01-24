@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
-
+require 'bcrypt'
 require 'sinatra'
+require 'sinatra/flash'
 require 'sqlite3'
-require 'slim'
+require 'thin'
+#require 'slim'
 require 'sass'
 require 'sinatra/activerecord'
-require 'redcarpet'
+#require 'redcarpet'
+
+enable :sessions
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/app')
-require 'routes'
 require 'models'
 require 'helpers'
+require 'routes'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/config')
 require 'constants.rb'

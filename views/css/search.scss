@@ -1,15 +1,14 @@
 .search {
     &__content {
         margin: 0;
-        padding: 40px;
         width: 100%;
     }
 
     &__title {
         text-align: center;
         border-bottom: none;
-
-        padding-bottom: 10px;
+        
+        margin-bottom: 25px;
     }
 
     &__field {
