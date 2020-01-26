@@ -1,5 +1,8 @@
 <div class="showPost box">
     <h2><%= @post.title %></h2>
+    <a href="/posts/<%= @post.id %>/edit/">Редактировать</a>
+    <span><%= @post.category %></span>
+    <span><%= @post.rating %></span>
     <p><%= pretty_date(@post.created_at) %></p>
         <%= @post.content %>
 </div>

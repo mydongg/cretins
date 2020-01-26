@@ -10,6 +10,8 @@ get '/posts/:id/' do
   @post = Post.find(params[:id])
   @title = @post.title
   @content = @post.content
+  @category = @post.category
+  @rating = @post.rating
   erb :'posts/show'
 end
 
@@ -25,7 +27,8 @@ post '/posts/new' do
   if @post.save
     redirect to '/'
   else
-    'Пост не был создан'
+    redirect to '/posts/new'
+    flash[:error] = "Пост не был создан"
   end
 
 end

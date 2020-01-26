@@ -1,0 +1,133 @@
+.post {
+    display: flex;
+
+    width: 100%;
+    height: 240px;
+
+    overflow: hidden;
+
+    background: #fff;
+    margin-bottom: 40px;
+    box-shadow: $shadow;
+    
+    border-radius: 4px;
+    
+    &-left {
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+
+    &-right {
+        width: 20%;
+        height: 100%;
+    }
+
+    &__inside {
+        display: block;
+        text-decoration: none;
+        color: #000;
+
+        height: 82%;
+    }
+
+    &__title {
+        padding: 25px 40px 0;
+    }
+
+    &__content {
+
+        padding: 10px 40px;
+
+        overflow: hidden;
+
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    &__info {
+
+        padding: 10px 40px 10px;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 18%;
+    
+        background: #fff;
+        color: rgba(0, 0, 0, 0.35);
+
+        border-top: 1px solid rgba(0, 0, 0, 0.35);
+
+        &-by, &-category {
+            display: flex;
+            flex-direction: row;
+
+            margin-right: 10px;
+
+            a {
+                text-decoration: none;
+                color: $main;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-time {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        &-likes, &-comments {
+            margin-left: 40px;
+
+            .like-button, .comment-button {
+                text-decoration: none;
+
+                color: rgba(0, 0, 0, 0.35);
+
+                svg {
+                    fill: rgba(0, 0, 0, 0.35);
+                }
+
+                &:hover span, &:hover #like, &:hover #comment {
+                    color: $text;
+                    fill: $text;
+                }
+
+                #like, #comment, span {
+                    transition: 150ms;
+                    transition-timing-function: ease-in-out;
+                    -webkit-transition: 150ms;
+                    -webkit-transition-timing-function: ease-in-out;
+                }
+            }
+        }
+    }
+
+    &__leftInfo, &__rightInfo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__poster {
+        width: 100%;
+        height: 100%;
+        
+        overflow: hidden;
+
+        background: lightgoldenrodyellow;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+}

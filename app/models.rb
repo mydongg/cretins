@@ -3,7 +3,10 @@
 class Post < ActiveRecord::Base
   validates :title, presence: true, length: {maximum: 100}
   validates :content, presence: true
+  validates :category, presence: true
+  validates :rating, presence: true
 end 
+
 
 class User < ActiveRecord::Base
   validates :username, presence: true, length: {minimum: 3, maximum: 20}, uniqueness: true

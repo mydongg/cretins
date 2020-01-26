@@ -5,11 +5,13 @@ class CreatePost < ActiveRecord::Migration[6.0]
     create_table :posts do |post|
       post.string :title
       post.text :content
+      post.string :category
+      post.numeric :rating
       post.timestamps
     end
   end
 
   def self.down
-    drop_table :posts
+    drop.table :posts
   end
 end

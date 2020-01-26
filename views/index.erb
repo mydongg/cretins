@@ -8,7 +8,7 @@
 			</div>
 		</form>
 
-		<div class="mainSlider box">
+		<!--<div class="mainSlider box">
 				<h2 class="mainSlider box__title">
 					Новинки месяца:
 				</h2>
@@ -115,6 +115,7 @@
 
 		<div class="mainComments box">
 			<h2 class="mainComments box__title">Новые рецензии:</h3>
+			
 			<% @posts.each do |post| %>
 			<div class="comment">
 				<div class="comment__left">
@@ -148,7 +149,9 @@
 			</div>
 			<% end %>
 
-		</div>	
+		</div>-->
+
+		<%= erb :'includes/post' %>
 
 	<!-- МОДАЛКА -->
 	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>

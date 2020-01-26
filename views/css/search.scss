@@ -14,7 +14,7 @@
     &__field {
         border: 1px solid rgba(0, 0, 0, 0.35);
         font-size: 20px;
-        padding: 10px;
+        padding: 9px;
         outline: none;
         width: 84%;
         margin: 0;
@@ -34,13 +34,12 @@
         cursor: pointer;
 
         background: $main;
-        border: 1px solid $main;
+        border: none;
         color: #fff;
         transition: .3s;
 
         &:hover{
             background: $text;
-            border-color: $text;
         }
     }
 

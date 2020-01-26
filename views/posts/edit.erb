@@ -1,23 +1,33 @@
 <div class="box">
     <h2 class="edit__title">Редактирование рецензии:</h2>
-    <a id="deletePost" href="/posts/<%= @post.id %>/delete/" @click="modalVis = true">Удалить</a>
+    <a id="deletePost" href="/posts/<%= @post.id %>/delete/" @click="postModalVis = true">Удалить</a>
     
     <form action="/posts/<%= @post.id %>/edit/" method="post">
         <input name="_method" type="hidden" value="put" />
         
-        <label for="title">Заголовок:</label>
+        <label for="title">Заголовок</label>
         <input type="text" name="post[title]" id="title" value="<%= @post.title %>">   
 
 
-        <label for="content">Содержание:</label>
+        <label for="content">Содержание</label>
         <textarea name="post[content]" id="content" ><%= @post.content %></textarea>
 
+        <label for="category"><strong>Категория</strong></label>
+        <select id="category" name="category">
+            <option>Фильмы</option>
+            <option>Сериалы</option>
+            <option>Мультики</option>
+        </select>
+
+        <label for="rating"><strong>Оценка</strong></label>
+        <input id="rating" type="text" name="rating" value="<%= @post.rating %>">
+        
         <input type="submit" value="Сохранить">
     </form>
 </div>
 
-<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
-	<div class="modal" v-if="modalVis">
+<div class="blur" v-if="postModalVis" @click="postModalVis = false"></div>
+	<div class="modal" v-if="postModalVis">
         <div class="modal_center">
         <% if @post %>
             <p>Вы уверены?</p>
@@ -30,11 +40,11 @@
         <% end %>
         </div>
 
-		<div class="modal__close" @click="modalVis = false">
+		<div class="modal__close" @click="postModalVis = false">
 			Отменить
 		</div>
 	</div>
 
 
-<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="/../node_modules/vue/dist/vue.min.js"></script>
 <script src="/../js/delete.js"></script>
