@@ -2,27 +2,33 @@
 
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra-flash', '~> 0.3.0'
-gem 'sass'
-gem 'thin'
-gem 'slim'
-#gem 'redcarpet'
+ruby File.read(File.expand_path('.ruby-version', __dir__)).strip
 
 gem 'activerecord'
-gem 'sinatra-activerecord'
-
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+gem 'colorize'
+gem 'dotenv'
+gem 'eventmachine', '1.2.7', git: 'git@github.com:eventmachine/eventmachine', tag: 'v1.2.7'
+gem 'rack-flash3'
+gem 'rake'
+gem 'sass'
+gem 'sinatra'
+gem 'sinatra-activerecord'
+#gem 'sinatra-flash', '~> 0.3.0'
+gem 'slim'
+gem 'thin'
+#gem 'redcarpet'
+gem 'warden'
 
 group :development do
-    gem 'tux'
-    gem 'sqlite3'
+  gem 'tux'
+  gem 'sqlite3'
 end
 
 group :production do
-    gem 'pg'
+  gem 'pg'
 end
 
 group :test do
-    gem 'rspec'
+  gem 'rspec'
 end

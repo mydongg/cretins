@@ -1,0 +1,24 @@
+.alert-box {
+    border: 1px solid;
+    display: block;
+
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+
+    transition: opacity 300ms ease-out;
+
+    .success {
+        background: #008000;
+        color: #fff;
+    }
+    
+    .notice {
+        background: #FFD700;
+    }
+    
+    .error {
+        background: #FF4500;
+    }
+}
+

@@ -153,7 +153,11 @@
 
 		<%= erb :'includes/post' %>
 
-	<!-- МОДАЛКА -->
+		<div class="box">
+			<%= @ses %>
+		</div>
+		
+	<!-- МОДАЛКА 
 	<div class="blur" v-if="modalVis" @click="modalVis = false"></div>
 	<div class="modal" v-if="modalVis">
 		<div class="modal__top">
@@ -181,7 +185,7 @@
 		<div class="modal__close" @click="modalVis = false">
 			Закрыть
 		</div>
-	</div>
+	</div> -->
 
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="./node_modules/vue-carousel/dist/vue-carousel.min.js"></script>

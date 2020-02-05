@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 
+require 'models'
+
 get '/' do
   @posts = Post.order("created_at DESC").limit(10)
-  
+  @ses = "Hello #{session[:name]}"
   erb :index
+end
+
+get '/protected' do
+	protected!
+	"Welcome protected"
 end
 
 get '/posts/:id/' do
@@ -17,7 +24,12 @@ end
 
 get '/posts/new' do
   @title = 'Новая рецензия'
-  erb :'posts/create'
+
+  if current_user
+    erb :'posts/create'
+  else
+    redirect '/auth'
+  end
 end
 
 post '/posts/new' do
@@ -65,15 +77,7 @@ end
 
 post '/auth/login' do
   #отправка формы с авторизацией
-	
-	if @user.password == params[:password]
-		give_token
-		redirect to '/'
-		flash[:success] = "Вы авторизованы"
-	else
-		redirect to '/auth'
-		flash[:error] = "Войти не удалось"
-	end
+  #z t,fk 'nj ujdyj ,kznm
 end
 
 post '/auth/reg' do

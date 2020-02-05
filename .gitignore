@@ -1,6 +1,7 @@
 .bundle
 .sass-cache
 
+app/backupmodels.rb
 public/node_modules
 public/package-lock.json
 
