@@ -1,24 +1,19 @@
-.alert-box {
-    border: 1px solid;
-    display: block;
-
+.flash-box {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    bottom: 5%;
+    right: 5%;
 
-    transition: opacity 300ms ease-out;
-
-    .success {
-        background: #008000;
-        color: #fff;
-    }
-    
-    .notice {
-        background: #FFD700;
-    }
-    
-    .error {
-        background: #FF4500;
-    }
+    width: max-content;
+    padding: 10px;
+    border-radius: $sq;
+    border: $shadow;
 }
 
+.error {
+    background: red;
+    color: #fff;
+}
+
+.success {
+    background: #52d160;
+}

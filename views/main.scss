@@ -68,13 +68,12 @@ img {
         border-bottom: 1px solid lightgray;
     }
 
-    &:first-child {
-        margin-top: 60px;
-    }
 }
 
-
+.first-box {
+    margin-top: 60px;
+}
 
 // import
 @import url('https://fonts.googleapis.com/css?family=Neucha|Roboto&display=swap');
-@import 'css/header', 'css/search', 'css/user', 'css/mainslider', 'css/maincomments', 'css/modal', 'css/profile', 'css/post', 'css/flashes';
+@import 'css/header', 'css/search', 'css/user', 'css/mainslider', 'css/maincomments', 'css/profile', 'css/post', 'css/flashes';

@@ -11,7 +11,7 @@
     <% end %>
 
     <link rel="stylesheet" href="/../css/main.css">
-
+	
 </head>
 <body>
 <div class="superwrapper">
@@ -45,20 +45,23 @@
           	</div>
           
             <div class="signIn">
-				<a href="/profile">
-					<img src="/../images/nophoto.jpg" alt="ProfilePic">
-				</a>
-
-				<a href="/auth">Войти</a>
+				<% if authenticated? %>
+					<a href="/profile/<%= @current_user.id %>/">
+						<%= @current_user.username %>
+					</a>
+					<a href="/logout">Выйти</a>
+				<% else %>
+					<a href="/auth">Войти</a>
+				<% end %>
 			</div>
 				
         </div>
         
 	</div>
 		<div class="wrapper">
-			
+			<%= erb :'includes/flash' %>
+
         	<%= yield %>
-			
 		</div>
 </div>
 </body>

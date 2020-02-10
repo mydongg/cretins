@@ -6,7 +6,7 @@ end
 
 get '/' do
   @posts = Post.order("created_at DESC").limit(10)
-  @ses = "Hello #{session[:name]}"
+
   erb :index
 end
 
@@ -42,7 +42,7 @@ post '/posts/new' do
     redirect to '/'
   else
     redirect to '/posts/new'
-    flash[:error] = "Пост не был создан"
+    flash[:error] = 'Пост не был создан'
   end
 
 end
@@ -67,8 +67,9 @@ delete '/posts/:id/' do
   redirect to '/'
 end
 
-get '/profile/?' do
-  @title = 'Профиль'
+get '/profile/:id/' do
+  @title = "Профиль #{ @current_user.username }"
+  @user = User.find(params[:id])
   erb :profile
 end
 
@@ -79,7 +80,7 @@ end
 
 post '/auth/login' do
   env['warden'].authenticate!
-  flash[:success] = 'Logged in!'
+  flash[:success] = "Вы вошли"
 
   redirect_to = session[:return_to] || '/'
   puts "logged in, redirect to #{redirect_to}".colorize(:green)
@@ -103,6 +104,20 @@ post '/auth/reg' do
   end
   
   redirect(redirect_to)
+end
+
+get '/logout' do
+  env['warden'].logout
+
+  flash[:success] = 'Вы вышли'
+  redirect '/'
+end
+
+post '/unauthenticated' do
+  session[:return_to] = env['warden.options'][:attempted_path]
+
+  flash[:error] = env['warden'].message || 'Логин или пароль введен неправильно'
+  redirect '/auth'
 end
 
 not_found do
