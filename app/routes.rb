@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-require 'models'
+before do
+  @current_user = env['warden'].user
+end
 
 get '/' do
   @posts = Post.order("created_at DESC").limit(10)
@@ -8,10 +10,10 @@ get '/' do
   erb :index
 end
 
-get '/protected' do
-	protected!
-	"Welcome protected"
-end
+#get '/protected' do
+#	protected!
+#	"Welcome protected"
+#end
 
 get '/posts/:id/' do
   @post = Post.find(params[:id])
@@ -25,7 +27,7 @@ end
 get '/posts/new' do
   @title = 'Новая рецензия'
 
-  if current_user
+  if authenticated?
     erb :'posts/create'
   else
     redirect '/auth'
@@ -34,9 +36,9 @@ end
 
 post '/posts/new' do
   params.delete 'submit'
-  @post = Post.create(params)
+  post = Post.create(params)
 
-  if @post.save
+  if post.save
     redirect to '/'
   else
     redirect to '/posts/new'
@@ -76,20 +78,31 @@ get '/auth' do
 end
 
 post '/auth/login' do
-  #отправка формы с авторизацией
-  #z t,fk 'nj ujdyj ,kznm
+  env['warden'].authenticate!
+  flash[:success] = 'Logged in!'
+
+  redirect_to = session[:return_to] || '/'
+  puts "logged in, redirect to #{redirect_to}".colorize(:green)
+
+  redirect(redirect_to)
 end
 
 post '/auth/reg' do
-	@user = User.create(params)
-	
-	if @user.save
-		redirect to '/auth'
-		flash[:success] = "Регистрация прошла успешно, теперь вы можете войти"
+  check_signup_enabled
+
+	user = User.new(username: params['username'], password: params['password'])
+	if user.save
+    env['warden'].authenticate!
+    flash[:success] = 'Регистрация прошла успешно, вы вошли'
+
+    redirect_to = session[:return_to] || '/'
+    puts "Logged in, redirect to #{redirect_to}".colorize(:green)
 	else
-		redirect to '/auth'
-		flash[:error] = "Регистрация не удалась"
-	end
+    flash[:error] = 'Регистрация не удалась'
+    redirect_to = '/auth'
+  end
+  
+  redirect(redirect_to)
 end
 
 not_found do

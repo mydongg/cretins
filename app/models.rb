@@ -9,35 +9,8 @@ end
 
 
 class User < ActiveRecord::Base
+  has_secure_password
+
   validates :username, presence: true, length: {minimum: 3, maximum: 20}, uniqueness: true
-  validates :password, presence: true
-    
-  include BCrypt
-  
-  def password
-    @password ||= Password.new(password_hash)
-  end
-  
-  def password=(new_password)
-    @password = Password.create(new_password).to_s
-    self.password_hash = @password
-  end
-  
-  def create
-    @user = User.new(params[:username])
-    @user.password = params[:password]
-    @user.save!
-  end
-    
-  def login
-    @user = User.find { |u| u.username == params[:username] }
-    if @user.password == params[:password]
-			session.clear
-			session[:user_id] = user.id
-			redirect to '/'
-    else
-     redirect to '/auth'
-		end
-	end
-	
+  validates :password_digest, presence: true
 end

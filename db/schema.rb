@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_083458) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password_hash"
+    t.string "password_digest"
   end
 
 end
