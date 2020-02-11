@@ -1,0 +1,41 @@
+<div class="header">
+
+	<div class="header-inner">
+
+		<div class="logo-block">
+			<a href="/">
+        <img src="/../images/logosample.png" alt="Cretins Logo">
+      </a>
+		</div>
+
+		<div class="nav-block">
+
+			<ul class="nav-list">
+				<li>
+					<a href="/search?search=Фильмы">Фильмы</a>
+				</li>
+				<li>
+					<a href="/search?search=Сериалы">Сериалы</a>
+				</li>
+				<li>
+					<a href="/search?search=Мультики">Мультики</a>
+				</li>
+				<li>
+					<a href="/posts/new">Новый пост</a>
+				</li>
+      </ul>
+            
+    </div>
+          
+    <div class="signIn">
+			<% if authenticated? %>
+				<a href="/profile/<%= @current_user.id %>/">
+					<%= @current_user.username %>
+				</a>
+				<a href="/logout">Выйти</a>
+			<% else %>
+				<a href="/auth">Войти</a>
+			<% end %>
+		</div>
+				
+  </div>

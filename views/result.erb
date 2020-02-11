@@ -1,0 +1,9 @@
+<%= erb :'includes/search' %>
+
+<% if @posts.present? %>
+  <%= erb :'includes/post' %>
+<% else %>
+  <div class="box">
+    <p>По запросу <%= params[:search] %> ничего не найдено</p>
+  </div>
+<% end %>

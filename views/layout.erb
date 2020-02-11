@@ -15,49 +15,9 @@
 </head>
 <body>
 <div class="superwrapper">
-	<div class="header">
-
-		<div class="header-inner">
-
-			<div class="logo-block">
-				<a href="/">
-                    <img src="/../images/logosample.png" alt="Cretins Logo">
-                </a>
-			</div>
-
-			<div class="nav-block">
-
-				<ul class="nav-list">
-					<li>
-						<a href="/">Фильмы</a>
-					</li>
-					<li>
-						<a href="/">Сериалы</a>
-					</li>
-					<li>
-						<a href="/">Мультики</a>
-					</li>
-					<li>
-						<a href="/posts/new">Новый пост</a>
-					</li>
-            	</ul>
-            
-          	</div>
-          
-            <div class="signIn">
-				<% if authenticated? %>
-					<a href="/profile/<%= @current_user.id %>/">
-						<%= @current_user.username %>
-					</a>
-					<a href="/logout">Выйти</a>
-				<% else %>
-					<a href="/auth">Войти</a>
-				<% end %>
-			</div>
-				
-        </div>
-        
-	</div>
+	
+	<%= erb :'includes/header' %>
+	
 		<div class="wrapper">
 			<%= erb :'includes/flash' %>
 

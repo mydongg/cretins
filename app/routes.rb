@@ -10,6 +10,16 @@ get '/' do
   erb :index
 end
 
+get '/search' do
+  @posts = Post.all.order("created_at DESC")
+  if params[:search]
+    @posts = Post.search(params[:search]).order("created_at DESC")
+  else
+    @posts = Post.all.order("created_at DESC")
+  end
+  erb :result
+end
+
 #get '/protected' do
 #	protected!
 #	"Welcome protected"
@@ -31,6 +41,7 @@ get '/posts/new' do
     erb :'posts/create'
   else
     redirect '/auth'
+    flash[:error] = 'Перед созданием поста нужно авторизоваться'
   end
 end
 

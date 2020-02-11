@@ -1,0 +1,18 @@
+---
+NeedToMake:
+  frontend:
+    - absolute flash-box with relative flash-messages in it
+    - post creating form more beautiful
+    - post showing page/connect modal with link
+    - profile page
+    - scrollable index page
+    -
+  backend:
+    - post authors
+    - search # ✓
+    - register with code
+    - comments+likes
+    - loading images (posts, users)
+    - fix double session (bruhmoment+sinatra)
+    - post rating validates (1 - 10) # ✓ / X 
+    -
